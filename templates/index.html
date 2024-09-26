@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Processing App</title>
+    <title>Text Lemmatization App</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -60,14 +60,15 @@
     </style>
 </head>
 <body>
-    <h1>Text Processing App</h1>
+    <h1>Text Lemmatization App</h1>
     <form method="POST">
         <textarea name="text" rows="10" cols="50" placeholder="Enter your text here..." required></textarea><br>
         <button type="submit">Process Text</button>
     </form>
-
+    <br>
+    <h2>lemmatized Text(Numerous grammatical, spelling, and structural errors are corrected):</h2>
     {% if lemmatized_text %}
-        <h2>lemmatized Text:</h2>
+        
         <p>{{ lemmatized_text }}</p>
     {% endif %}
 
