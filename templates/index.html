@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Processing App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #ffffff;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        h2 {
+            margin-top: 20px;
+            color: #f7f3f3;
+        }
+        #para { 
+            max-width: 800px;
+            padding: 10px;
+            margin:auto;
+        }
+        p {
+            background: #e2e2e2;
+            padding: 10px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text Processing App</h1>
+    <form method="POST">
+        <textarea name="text" rows="10" cols="50" placeholder="Enter your text here..." required></textarea><br>
+        <button type="submit">Process Text</button>
+    </form>
+
+    {% if lemmatized_text %}
+        <h2>lemmatized Text:</h2>
+        <p>{{ lemmatized_text }}</p>
+    {% endif %}
+
+
+</body>
+</html>
